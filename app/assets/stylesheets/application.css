@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+*{
+  margin: 0;
+  margin-left: 0;
+}
+.container{
+  z-index: 100;
+}
+
+#submit-bar{
+  margin-top: 2em;
+}
+
+#content-div{
+  display: inline-block;
+  position: fixed;
+  z-index: 100;
+  width: 25em;
+  margin-bottom: 1em;
+  height: 100%;
+  overflow-y: auto;
+}
+
+p{
+  width: 23em;
+}
+
+.todo{
+  display: inline-block;
+  width: 25em;
+  margin-bottom: 1em;
+}
+
+.fa:hover{
+  color: red;
+}
+
+/*input:focus{
+  outline: 2px solid rgba(255,0,0,.5) !important;
+  border-radius: 2px;
+}
+*/
+/* SVG THINGS */
+.overlay {
+  opacity: .7;
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index: 0;
+  overflow: auto;
+}
+
+line{
+  transition: all .5s;
+}
+
+/*svg{
+  z-index: 0;
+}*/
+
+/*.wrapper{
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  @include transition(width 0.3s ease-out);
+}*/
+
+.line {
+  animation: dash 30s linear infinite;
+}
+
+.line1 {
+  animation: dash 7s linear infinite;
+}
+
+
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 500;
+  }
+}
+
+
