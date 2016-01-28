@@ -13,6 +13,7 @@ app.controller('TodosController', ['$scope', '$http', function($scope, $http){
     $http.post('/api/todos', {todo: $scope.newTodo}).then(function( response ){
       var data = response.data;
       $scope.todos.push( data );
+      $scope.newTodo = {};
     });
   };
 
