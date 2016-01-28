@@ -18,6 +18,15 @@
   margin: 0;
   margin-left: 0;
 }
+
+body{
+  transition: background-color 2s;
+}
+
+.bodyChange{
+  background-color: whitesmoke;
+}
+
 .container{
   z-index: 100;
 }
@@ -50,35 +59,17 @@ p{
   color: red;
 }
 
-/*input:focus{
-  outline: 2px solid rgba(255,0,0,.5) !important;
-  border-radius: 2px;
-}
-*/
+
 /* SVG THINGS */
+
 .overlay {
-  opacity: .7;
+  opacity: .5;
   position: fixed;
   width:100%;
   height:100%;
   z-index: 0;
   overflow: auto;
 }
-
-line{
-  transition: all .5s;
-}
-
-/*svg{
-  z-index: 0;
-}*/
-
-/*.wrapper{
-  width: 40%;
-  margin: 0 auto;
-  text-align: center;
-  @include transition(width 0.3s ease-out);
-}*/
 
 .line {
   animation: dash 30s linear infinite;
@@ -87,8 +78,6 @@ line{
 .line1 {
   animation: dash 7s linear infinite;
 }
-
-
 
 @keyframes dash {
   from {

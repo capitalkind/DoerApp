@@ -15,28 +15,37 @@
 //= require_tree .
 console.log('loaded');
 
+function backgroundColorChange(){
+  $('#circle').toggleClass('.bodyChange');
+}
+
+
 $(document).ready(function(){
 
-$('#circle').on('mouseover', function(){
-  $('body').fadeOut(900, function(){
-    $(this).css('background-color', 'whitesmoke').fadeIn(900);
-  });
+$('#circle').click(function(){
+  backgroundColorChange();
 });
 
-$('.line1').on('mouseover', function(){
-  $('body').fadeOut(900, function(){
-    $(this).css('background-color', 'white').fadeIn(900);
-  });
-});
+// $('#circle').on('mouseover', function(){
+//   $('body').fadeOut(900, function(){
+//     $(this).css('background-color', 'whitesmoke').fadeIn(900);
+//   });
+// });
 
-$('.line4').on('mouseover', function(){
-  $('.line1').fadeOut(900, function(){
-    $('.line1').css('stroke', 'rgb(51,195,240)').fadeIn(900);
-  $('p').fadeOut(900, function(){
-    $(this).css('color', 'rgb(51,195,240)').fadeIn(900);
-    });
-  });
-});
+// $('.line1').on('mouseover', function(){
+//   $('body').fadeOut(900, function(){
+//     $(this).css('background-color', 'white').fadeIn(900);
+//   });
+// });
+
+// $('.line4').on('mouseover', function(){
+//   $('.line1').fadeOut(900, function(){
+//     $('.line1').css('stroke', 'rgb(51,195,240)').fadeIn(900);
+//   $('p').fadeOut(900, function(){
+//     $(this).css('color', 'rgb(51,195,240)').fadeIn(900);
+//     });
+//   });
+// });
 
 
 });
