@@ -26,49 +26,77 @@ $(document).ready(function(){
     return color;
   }
 
-  $('#circle2').hover(
-    function(){
-      $('#circle2').attr('r', '70').attr('stroke-dasharray', '7.5, 4.7');
-      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
-      $('#blue-line').css('stroke', 'red');
-      $('#blue-line2').css('stroke', 'red');
-      $('body').css('background-color', getRandomColor());
-     }, function(){
-      $('#circle2').attr('r', '49');
-      $('#red-line').css('stroke', 'red');
-      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
-      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
-      $('body').css('background-color', 'white');
-    }
-  );
-
-  $('#circle3').hover(
-    function(){
-      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
-      $('#blue-line').css('stroke', 'red');
-      $('#blue-line2').css('stroke', 'red');
-      $('body').css('background-color', getRandomColor());
-     }, function(){
-      $('#red-line').css('stroke', 'red');
-      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
-      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
-      $('body').css('background-color', 'white');
-    }
-  );
-
   $('#circle').hover(
     function(){
       $(this).attr('stroke', 'rgba(51,195,240,1)')
       $(this).attr('r', '150');
       $('#circle2').attr('stroke-dasharray', '7.5, 4.7');
       $('body').css('background-color', getRandomColor());
-      $('#circle2').attr('stroke', 'red')
+      $('#circle2').attr('stroke', 'rgba(255,0,0,1)')
       $('#circle3').attr('stroke', 'rgba(51,195,240,1)')
+      $('#circle4').attr('stroke', 'rgba(51,195,240,1)')
      }, function(){
       $('#circle2').attr('stroke', 'rgba(51,195,240,1)')
-      $('#circle3').attr('stroke', 'red')
-      $(this).attr('stroke', 'red')
+      $('#circle3').attr('stroke', 'rgba(255,0,0,1)')
+      $('#circle4').attr('stroke', 'rgba(255,0,0,1)')
+      $(this).attr('stroke', 'rgba(255,0,0,1)')
       $(this).attr('r', '199');
+      $('body').css('background-color', 'white');
+    }
+  );
+
+  $('#circle2').hover(
+    function(){
+      $(this).attr('r', '70').attr('stroke-dasharray', '7.5, 4.3');
+      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line2').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line3').css('stroke', 'rgba(255,0,0,1)');
+      $('body').css('background-color', getRandomColor());
+     }, function(){
+      $(this).attr('r', '49');
+      $('#red-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line3').css('stroke', 'rgba(51,195,240,1)');
+      $('body').css('background-color', 'white');
+    }
+  );
+
+  $('#circle3').hover(
+    function(){
+      $(this).attr('r', '150').attr('stroke-dasharray', '7, 5.1');
+      $(this).css('stroke', 'rgba(51,195,240,1)');
+      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line2').css('stroke', 'rgba(255,0,0,1)');
+      $('body').css('background-color', getRandomColor());
+     }, function(){
+       $(this).attr('r', '29');
+      $(this).css('stroke', 'rgba(255,0,0,1)');
+      $('#red-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
+      $('body').css('background-color', 'white');
+    }
+  );
+
+    $('#circle4').hover(
+    function(){
+      $(this).attr('r', '250').attr('stroke-dasharray', '7, 4.8');
+      $(this).css('stroke', 'rgba(51,195,240,1)');
+      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line2').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line3').css('stroke', 'rgba(255,0,0,1)');
+      $('body').css('background-color', getRandomColor());
+     }, function(){
+      $(this).attr('r', '79');
+      $(this).css('stroke', 'rgba(255,0,0,1)');
+      $('#red-line').css('stroke', 'rgba(255,0,0,1)');
+      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line3').css('stroke', 'rgba(51,195,240,1)');
       $('body').css('background-color', 'white');
     }
   );
