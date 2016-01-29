@@ -24,4 +24,11 @@ app.controller('TodosController', ['$scope', '$http', function($scope, $http){
     });
   }
 
+  $scope.updateTodo = function( id ){
+    $http.update('/api/todos/' + id).then(function( response ){
+      var data = response.data;
+      $scope.todos = data.todos;
+    })
+  }
+
 }]);

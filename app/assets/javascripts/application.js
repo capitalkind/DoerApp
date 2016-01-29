@@ -15,38 +15,63 @@
 //= require_tree .
 console.log('loaded');
 
-function backgroundColorChange(){
-  $('#circle').toggleClass('.bodyChange');
-}
-
-
 $(document).ready(function(){
 
-$('#circle').click(function(){
-  backgroundColorChange();
-});
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
-// $('#circle').on('mouseover', function(){
-//   $('body').fadeOut(900, function(){
-//     $(this).css('background-color', 'whitesmoke').fadeIn(900);
-//   });
-// });
+  $('#circle2').hover(
+    function(){
+      $('#circle2').attr('r', '70').attr('stroke-dasharray', '7.5, 4.7');
+      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line').css('stroke', 'red');
+      $('#blue-line2').css('stroke', 'red');
+      $('body').css('background-color', getRandomColor());
+     }, function(){
+      $('#circle2').attr('r', '49');
+      $('#red-line').css('stroke', 'red');
+      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
+      $('body').css('background-color', 'white');
+    }
+  );
 
-// $('.line1').on('mouseover', function(){
-//   $('body').fadeOut(900, function(){
-//     $(this).css('background-color', 'white').fadeIn(900);
-//   });
-// });
+  $('#circle3').hover(
+    function(){
+      $('#red-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line').css('stroke', 'red');
+      $('#blue-line2').css('stroke', 'red');
+      $('body').css('background-color', getRandomColor());
+     }, function(){
+      $('#red-line').css('stroke', 'red');
+      $('#blue-line').css('stroke', 'rgba(51,195,240,1)');
+      $('#blue-line2').css('stroke', 'rgba(51,195,240,1)');
+      $('body').css('background-color', 'white');
+    }
+  );
 
-// $('.line4').on('mouseover', function(){
-//   $('.line1').fadeOut(900, function(){
-//     $('.line1').css('stroke', 'rgb(51,195,240)').fadeIn(900);
-//   $('p').fadeOut(900, function(){
-//     $(this).css('color', 'rgb(51,195,240)').fadeIn(900);
-//     });
-//   });
-// });
-
+  $('#circle').hover(
+    function(){
+      $(this).attr('stroke', 'rgba(51,195,240,1)')
+      $(this).attr('r', '150');
+      $('#circle2').attr('stroke-dasharray', '7.5, 4.7');
+      $('body').css('background-color', getRandomColor());
+      $('#circle2').attr('stroke', 'red')
+      $('#circle3').attr('stroke', 'rgba(51,195,240,1)')
+     }, function(){
+      $('#circle2').attr('stroke', 'rgba(51,195,240,1)')
+      $('#circle3').attr('stroke', 'red')
+      $(this).attr('stroke', 'red')
+      $(this).attr('r', '199');
+      $('body').css('background-color', 'white');
+    }
+  );
 
 });
 

@@ -39,11 +39,15 @@ body{
   display: inline-block;
   position: fixed;
   z-index: 100;
-  width: 25em;
+  width: 30em;
   margin-bottom: 1em;
   margin-left: 3em;
   height: 100%;
   overflow-y: auto;
+}
+
+#submit-bar{
+  width: 30em;
 }
 
 p{
@@ -53,7 +57,7 @@ p{
 .todo{
   display: inline-block;
   width: 25em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .fa:hover{
@@ -63,6 +67,23 @@ p{
 
 /* SVG THINGS */
 
+#logo-div{
+  margin: 0 auto;
+}
+
+#logo{
+  height: 100px;
+  left: 30px;
+  top: 10px;
+  right: 30px;
+  position: absolute;
+  text-align: left;
+  margin: 0 auto;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 10s linear forwards infinite;
+}
+
 .overlay {
   opacity: 1;
   position: fixed;
@@ -70,6 +91,14 @@ p{
   height:100%;
   z-index: 0;
   overflow: auto;
+}
+
+line{
+  transition: stroke 2s;
+}
+
+circle{
+  transition: r 2s, stroke 2s;
 }
 
 .circle{
