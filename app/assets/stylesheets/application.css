@@ -109,6 +109,14 @@ circle{
   animation: dash 15s linear reverse infinite;
 }
 
+.circle3{
+  animation: dash2 15s linear infinite;
+}
+
+.circle4{
+  animation: dash2 15s linear reverse infinite;
+}
+
 .line {
   animation: dash 30s linear infinite;
 }
@@ -127,4 +135,8 @@ circle{
   }
 }
 
-
+@keyframes dash2 {
+  from {
+    stroke-dashoffset: 1000;
+  }
+}

@@ -17,7 +17,7 @@
       <line class="line4" x1="740" y1="0" x2="784" y2="130" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
       <line id="red-line" class="line1" x1="875" y1="400" x2="784" y2="130" style="stroke:rgba(255,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
       <line class="" x1="875" y1="400" x2="1275" y2="1575" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
-      <circle id="circle2" class="circle" cx="838" cy="133" r="49" stroke="rgba(51,195,240,1)" stroke-width="5" fill="none" stroke-dasharray="7.5, 4.8"/>
+      <circle id="circle2" class="circle3" cx="838" cy="133" r="49" stroke="rgba(51,195,240,1)" stroke-width="5" fill="none" stroke-dasharray="7, 4.8"/>
       <line class="" x1="1500" y1="0" x2="710" y2="220" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
       <line id="blue-line" class="line1" x1="710" y1="221" x2="570" y2="260" style="stroke:rgba(51,195,240,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
       <line class="" x1="560" y1="263" x2="0" y2="419" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
@@ -29,18 +29,22 @@
       <line class="" x1="0" y1="1050" x2="560" y2="658" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="11, 8" />
       <line class="" x1="560" y1="658" x2="880" y2="434" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="11, 8" />
       <line id="blue-line3" class="line2" x1="880" y1="434" x2="1500" y2="0" style="stroke:rgba(51,195,240,1)"; stroke-width="3"; stroke-dasharray="10, 10" />
-      <circle id="circle4" class="circle" cx="1065" cy="403 " r="79" stroke="rgba(255,0,0,1)" stroke-width="5" fill="none" stroke-dasharray="7, 5.7"/>
+      <circle id="circle4" class="circle3" cx="1065" cy="403 " r="79" stroke="rgba(255,0,0,1)" stroke-width="5" fill="none" stroke-dasharray="7, 4" />
       <!-- <line class="" x1="0" y1="1050" x2="1500" y2="0" style="stroke:rgba(51,195,240,.5)"; stroke-width="3"; stroke-dasharray="11, 8" /> -->
 
-      <line class="" x1="0" y1="1443" x2="1079" y2="497" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="9, 10" />
-      <line id="red-line2" class="line" x1="1646" y1="0" x2="1080" y2="496" style="stroke:rgba(255,0,0,1)"; stroke-width="3"; stroke-dasharray="9, 10" />
+      <line class="" x1="0" y1="1443" x2="1079" y2="497" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="9.8, 4.9" />
+      <line id="red-line2" class="line" x1="1646" y1="0" x2="1080" y2="496" style="stroke:rgba(255,0,0,1)"; stroke-width="3"; stroke-dasharray="9.8, 4.9" />
       <!-- <line class="" x1="0" y1="1443" x2="1646" y2="0" style="stroke:green"; stroke-width="3"; stroke-dasharray="11, 8" /> -->
 
-      <!-- <line class="" x1="684" y1="0" x2="1808" y2="1600" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="8, 10" /> -->
+      <line class="" x1="685" y1="0" x2="1050" y2="521" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="8, 9" />
 
-      <!-- <line class="" x1="684" y1="0" x2="1808" y2="1600" style="stroke:rgba(0,0,0,1)"; stroke-width="3"; stroke-dasharray="10, 10" /> -->
+      <line id="blue-line4" class="line" x1="1052" y1="523" x2="1808" y2="1600" style="stroke:rgba(51,195,240,1)"; stroke-width="3"; stroke-dasharray="8, 9" />
 
-      <line class="" x1="684" y1="0" x2="1808" y2="1600" style="stroke:green"; stroke-width="3"; stroke-dasharray="8, 10" />
+      <!-- <line class="" x1="685" y1="0" x2="1808" y2="1600" style="stroke:green"; stroke-width="3"; stroke-dasharray="8, 9" /> -->
+
+      <circle id="circle5" class="circle4" cx="1227" cy="543" r="130" stroke="rgba(51,195,240,1)" stroke-width="5" fill="none" stroke-dasharray="7.5, 4" />
+
+      <circle id="circle6" class="circle2" cx="648" cy="129" r="104" stroke="rgba(255,0,0,1)" stroke-width="5" fill="none" stroke-dasharray="7.5, 6.4" />
 
     </svg>
   </div>
@@ -59,42 +63,9 @@
       </div>
 
       <div ng-repeat="todo in todos | filter:q" class="todo">
-        <h4>{{ todo.title }} <i class="fa fa-check-square-o" ng-click="deleteTodo(todo.id)"></i> </h4>
+        <h4>{{ todo.title }} <i class="fa fa-check-square-o" ng-click="deleteTodo(todo.id)"></i> <!-- <i class="fa fa-pencil-square-o" id="edit-button" data-toggle="modal" data-target="#edit-modal"></i> --></h4>
         <p>{{ todo.content }}</p>
       </div>
-
-  <!--     <div class="modal fade" role="dialog" id="edit-modal">
-        <div class="modal-header">
-          Edit Idea
-        </div>
-        <div class="modal-content">
-          <input type="text" ng-model="newTodo.title" placeholder="title">
-          <input type="text" ng-model="newTodo.content" placeholder="content">
-          <input type="submit" style="display: none;">
-        </div>
-      </div> -->
-
-
-<!--     <div id="edit-modal" class="md-modal effect-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal">&times;</button>
-           <h4 class="modal-title">Edit Idea</h4>
-         </div>
-          <div class="modal-body">
-            <form ng-submit="createTodo()">
-              <input type="text" ng-model="newTodo.title" placeholder="title">
-              <input type="text" ng-model="newTodo.content" placeholder="content">
-              <input type="submit" style="display: none;">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-
 
     </section>
 
@@ -103,6 +74,25 @@
 
 
 
-</div>
+<!-- </div>
 
-
+ <div class="container" ng-controller="TodosController">
+    <div id="edit-modal" class="modal fade" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+           <h4 class="modal-title">Edit Idea</h4>
+         </div>
+          <div class="modal-body">
+            <form id="edit" ng-submit="updateTodo()">
+              <input type="text" ng-model="newTodo.title" placeholder="title">
+              <input type="text" ng-model="newTodo.content" placeholder="content">
+              <input type="submit" style="display: none;">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ -->

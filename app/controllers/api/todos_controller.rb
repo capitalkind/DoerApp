@@ -19,7 +19,7 @@ class Api::TodosController < ApplicationController
 
   def update
     todo = Todo.find(params[:id])
-    todo.update
+    todo.update(todo_params)
     dbTodos = Todo.all
     render json: {todos: dbTodos}
   end
