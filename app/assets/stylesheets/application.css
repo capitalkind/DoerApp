@@ -19,6 +19,10 @@
   margin-left: 0;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body{
   transition: background-color 2s;
 }
@@ -34,26 +38,34 @@ body{
 #content-div{
   display: inline-block;
   position: fixed;
-  z-index: 100;
+  /*z-index: 100;*/
   width: 30em;
+  padding-top: .5em;
+  /*margin-top: .5em;*/
   margin-bottom: 1em;
   margin-left: 3em;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  transition: opacity 2s;
 }
 
 #submit-bar{
   width: 30em;
+  overflow-y: auto;
 }
 
 p{
   width: 23em;
 }
 
+i{
+  position: relative; top: 70%; transform: translateY(10%);
+}
+
 .todo{
   display: inline-block;
   width: 25em;
-  margin-bottom: 2em;
+  margin-bottom: .5em;
 }
 
 .fa:hover{
@@ -62,8 +74,9 @@ p{
 
 @media only screen and (max-width: 480px) {
 
-  #submit-bar{
-    display: inline-block;
+  *{
+    margin-left: .1em !important;
+    margin-top: .1em !important;
   }
 
 }
@@ -76,8 +89,8 @@ p{
   position: fixed;
   width:100%;
   height:100%;
-  z-index: 0;
-  overflow: auto;
+  /*z-index: 0;*/
+  /*overflow: auto;*/
 }
 
 line{
@@ -90,6 +103,10 @@ circle{
 
 .circle{
   animation: dash 15s linear infinite;
+}
+
+.circle2{
+  animation: dash 15s linear reverse infinite;
 }
 
 .line {
